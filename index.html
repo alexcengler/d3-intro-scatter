@@ -29,6 +29,25 @@
   var width = 600 - margin*2;
   var height = 450 - margin*2;
 
+
+d3.json("data.json", function(error, data) {
+
+  // Save JSON data as a global variable;
+  dataset = data;
+
+  // Call plot function that we will define below
+  makeScatterplot();
+
+});
+
+function makeScatterplot() {
+  // We can examine the loaded data in the console
+  console.log(dataset);
+
+  
+};
+
+
 </script>
 
 
