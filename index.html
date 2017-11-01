@@ -52,6 +52,18 @@ function makeScatterplot() {
     .attr('width', width + margin*2)
     .attr('height', height + margin*2);
 
+  var g = svg.append('g')
+    .attr('transform', 'translate(' + margin + ',' + margin + ')');
+
+  g.selectAll(".dot")
+    .data(dataset)
+    .enter()
+    .append("circle")
+    .attr("class", "dot")
+    .attr("r", 8)
+    .attr("cx", function (d) { return d.unemployment; })
+    .attr("cy", function (d) { return d.inflation; });
+
 };
 
 
