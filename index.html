@@ -15,8 +15,24 @@
       background-color: #DADFFF;
     }
 
-  </style>
+  .dot {
+    stroke: rgb(51, 122, 183);
+    stroke-width: 1;
+    fill: rgba(51, 122, 183, .5);
+    opacity: .5;
+  }
 
+  .axis path, .axis line {
+    fill: none;
+    stroke: #ccc;
+    shape-rendering: crispEdges;
+  }
+
+  .axis text {
+    font-size: 11px;
+  }
+
+  </style>
 
 </head>
 <body>
@@ -105,11 +121,9 @@ function makeScatterplot() {
     .attr("y", margin/3)
     .attr("x",0 - (height + margin)/2)
     .style("text-anchor", "middle")
-    .text("Inflation");     
-
+    .text("Inflation");
 
 };
-
 
 </script>
 
