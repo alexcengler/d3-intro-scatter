@@ -83,6 +83,16 @@ function makeScatterplot() {
       return col
     });
 
+  // Add the x axis
+  svg.append("g")
+    .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
+    .call(d3.axisBottom(xScale));
+
+  // Add the x
+  svg.append("g")
+    .attr("transform", "translate(" + margin + "," + margin + ")")
+    .call(d3.axisLeft(yScale));
+
 
 };
 
