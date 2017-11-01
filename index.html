@@ -93,6 +93,20 @@ function makeScatterplot() {
     .attr("transform", "translate(" + margin + "," + margin + ")")
     .call(d3.axisLeft(yScale));
 
+  // text label for the x axis
+  svg.append("text")             
+    .attr("transform", "translate(" + (width/2) + " ," + (height + margin + 40) + ")")
+    .style("text-anchor", "middle")
+    .text("Unemployment");
+
+  // text label for the y axis
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", margin/3)
+    .attr("x",0 - (height + margin)/2)
+    .style("text-anchor", "middle")
+    .text("Inflation");     
+
 
 };
 
