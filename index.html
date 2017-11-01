@@ -11,6 +11,10 @@
         text-indent: 50px;
     }
 
+    svg {
+      background-color: #DADFFF;
+    }
+
   </style>
 
 
@@ -41,10 +45,13 @@ d3.json("data.json", function(error, data) {
 });
 
 function makeScatterplot() {
-  // We can examine the loaded data in the console
-  console.log(dataset);
 
-  
+  // Select chart div and create an SVG element inside of it. This is where we will create our visualization.
+  var svg = d3.select("#chart")
+    .append('svg')
+    .attr('width', width + margin*2)
+    .attr('height', height + margin*2);
+
 };
 
 
