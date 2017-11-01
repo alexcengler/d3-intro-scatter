@@ -75,7 +75,14 @@ function makeScatterplot() {
     .attr("class", "dot")
     .attr("r", 8)
     .attr("cx", function (d) { return xScale(d.unemployment); })
-    .attr("cy", function (d) { return yScale(d.inflation); });
+    .attr("cy", function (d) { return yScale(d.inflation); })
+    .style("fill", function(d) { 
+      var col
+      if(d.year > 2000){ col = "#ec008b"} 
+      else { col = "#1696d2" }
+      return col
+    });
+
 
 };
 
